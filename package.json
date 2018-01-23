@@ -1,6 +1,6 @@
 {
   "name": "brain-games-by-julia",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "First project",
   "main": "dist/index.js",
   "scripts": {
@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/juliastetskaya/project-lvl1-s192/issues"
   },
-  "homepage": "https://github.com/juliastetskaya/project-lvl1-s192#readme"
+  "homepage": "https://github.com/juliastetskaya/project-lvl1-s192#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.7"
+  }
 }
