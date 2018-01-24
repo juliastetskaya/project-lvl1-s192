@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import { getRandomInt, isEven } from './math';
+import { car, cdr } from 'hexlet-pairs';
 
-const game = (rules) => {
+const game = (rules, data) => {
   console.log(`Welcome to the Brain Games!\n${rules}`);
 
   const name = readlineSync.question('May I have your name?: ');
@@ -13,10 +13,11 @@ const game = (rules) => {
       return;
     }
 
-    const ranNum = getRandomInt(1, 500);
-    const correctAnswer = isEven(ranNum) ? 'no' : 'yes';
+    const initData = data();
+    const expression = car(initData);
+    const correctAnswer = cdr(initData);
 
-    console.log(`Question: ${ranNum}`);
+    console.log(`Question: ${expression}`);
     const answer = readlineSync.question('Your answer: ');
 
     if (answer === correctAnswer) {
