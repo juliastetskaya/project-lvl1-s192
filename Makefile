@@ -15,6 +15,9 @@ brain-calc:
 brain-gcd:
 	npm run babel-node -- src/bin/brain-gcd.js
 
+brain-balance:
+	npm run babel-node -- src/bin/brain-balance.js
+
 publish:
 	npm publish
 
