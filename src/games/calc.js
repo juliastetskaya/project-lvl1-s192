@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import { getRandomInt, getRandomOper, sum, multi, subtrac } from '../math';
+import { getRandomInt, getRandomOper, sum, multiplication, subtraction } from '../math';
 import game from '../index';
 
 const rules = 'What is the result of the expression?';
@@ -13,8 +13,8 @@ const data = () => {
 
   const objOper = {
     '+': sum(operand1, operand2),
-    '-': subtrac(operand1, operand2),
-    '*': multi(operand1, operand2),
+    '-': subtraction(operand1, operand2),
+    '*': multiplication(operand1, operand2),
   };
 
   const result = objOper[operation];
