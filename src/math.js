@@ -50,3 +50,19 @@ export const makeProgression = (firstMember, difference) => {
   }
   return arr;
 };
+
+const divisor = (num, div) => num % div === 0;
+
+const findDivisor = (num, testDivisor) => {
+  if (testDivisor ** 2 > num) {
+    return num;
+  }
+  if (divisor(num, testDivisor)) {
+    return testDivisor;
+  }
+  return findDivisor(num, testDivisor + 1);
+};
+
+const smallestDivisor = num => findDivisor(num, 2);
+
+export const isPrime = num => num === smallestDivisor(num);
